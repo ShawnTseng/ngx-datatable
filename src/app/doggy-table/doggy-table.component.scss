@@ -1,0 +1,38 @@
+//colors
+$color_alto_approx: #ddd;
+$concrete: #f2f2f2;
+$color_apple_approx: #4caf50;
+$white: white;
+
+//fonts
+$font_0: Trebuchet MS;
+$font_1: Arial;
+$font_2: Helvetica;
+$font_3: sans-serif;
+
+#doggy-table {
+	font-family: $font_0, $font_1, $font_2, $font_3;
+	border-collapse: collapse;
+	width: 100%;
+	td {
+		border: 1px solid $color_alto_approx;
+		padding: 8px;
+	}
+	th {
+		border: 1px solid $color_alto_approx;
+		padding: 8px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: left;
+		background-color: $color_apple_approx;
+		color: $white;
+	}
+	tr {
+		&:nth-child(even) {
+			background-color: $concrete;
+		}
+		&:hover {
+			background-color: $color_alto_approx;
+		}
+	}
+}
