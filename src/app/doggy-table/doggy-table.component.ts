@@ -8,29 +8,9 @@ import { Column } from './column';
 })
 
 export class DoggyTableComponent {
-  @Input()
-  set columns(val: Column[]) {
-    if (val) {
-      this._columns = val;
-    }
-  }
+  /** 欄位 */
+  @Input() columns: Column[];
 
-  get columns() {
-    return this._columns;
-  }
-
-  @Input()
-  set rows(val: Array<any>) {
-    if (val) {
-      this._rows = val;
-    }
-  }
-
-  get rows() {
-    return this._rows;
-  }
-
-  private _columns: Column[] = [];
-
-  private _rows: Array<any>;
+  /** 資料列 */
+  @Input() rows: Array<any>;
 }
